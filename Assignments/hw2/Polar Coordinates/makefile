@@ -19,7 +19,7 @@
 
 CXX = g++
 FLAGS = -W -Wall -pedantic-errors
-OBJECTS = driver.o
+OBJECTS = driver.o polarCoord.o
 
 .SUFFIXES: .cpp
 
@@ -37,4 +37,5 @@ clean:
 
 
 #Dependency lists for OBJECTS
-driver.o: driver.cpp norm.h polarCoord.hpp polarCoord.h
+driver.o: driver.cpp norm.h polarCoord.o
+polarCoord.o: polarCoord.cpp polarCoord.hpp
