@@ -1,10 +1,10 @@
 ///////////////////////////////////////////////////////////////////
-/// @file polarCoord.h
+/// @file polarCoord.cpp
 /// @author Matthew Quigley CS328 Section A
 /// @brief implimentation of the Polar Coordinate class PolarCoord
 ///////////////////////////////////////////////////////////////////
-#ifndef polarCoord_tpp
-#define polarCoord_tpp
+#ifndef polarCoord_cpp
+#define polarCoord_cpp
 template<class T>
 T PolarCoord<T>::operator~() const{
 	return std::abs(modulus);
