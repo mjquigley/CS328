@@ -5,6 +5,7 @@
 ///////////////////////////////////////////////////////////////////
 #ifndef polarCoord_cpp
 #define polarCoord_cpp
+#include "polarCoord.hpp"
 template<class T>
 T PolarCoord<T>::operator~() const{
 	return std::abs(modulus);
