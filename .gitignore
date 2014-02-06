@@ -12,3 +12,6 @@ driver
 *.lai
 *.la
 *.a
+
+# Pre-Submission code
+**/submit_dir
