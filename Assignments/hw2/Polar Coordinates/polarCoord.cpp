@@ -53,6 +53,9 @@ PolarCoord<T>& PolarCoord<T>::operator*(const PolarCoord<T>& other) const{
 
 template<class T>
 PolarCoord<T>& PolarCoord<T>::operator/(const PolarCoord<T>& other) const{
+	if (other.modulus == 0){
+		throw DivideByZeroException();
+	}
 	return PolarCoord<T>(modulus / other.modulus, argument - other.modulus);
 }
 
