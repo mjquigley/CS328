@@ -1,0 +1,2 @@
+driver.o: driver.cpp norm.h polarCoord.hpp polarCoord.cpp
+polarCoord.o: polarCoord.cpp polarCoord.hpp

@@ -19,23 +19,31 @@
 
 CXX = g++
 FLAGS = -W -Wall -pedantic-errors
-OBJECTS = driver.o polarCoord.o
 
-.SUFFIXES: .cpp
+SOURCES = $(wildcard *.cpp)
+HEADERS = $(wildcard *.h)
 
-.cpp.o : $<
-	${CXX} -c ${FLAGS} $< -o $@
+OBJECTS = $(SOURCES:%.cpp=%.o)
 
 all: driver
+
+%.o: %.cpp
+	${CXX} ${FLAGS} -c $< -o $@
+
 driver: ${OBJECTS}
 	${CXX} ${FLAGS} ${OBJECTS} -o $@
 
+profile: FLAGS += -pg
+profile: driver
 clean:
 	-@ rm -f core > /dev/null 2>&1
 	-@ rm -f driver > /dev/null 2>&1
 	-@ rm -f ${OBJECTS} > /dev/null 2>&1
 
+# Automatically generate dependencies and include them in Makefile
+depend: $(SOURCES) $(HEADERS)
+	@echo "Generating dependencies"
+	@$(CXX) -MM *.cpp > $@
 
-#Dependency lists for OBJECTS
-driver.o: driver.cpp norm.h polarCoord.o
-polarCoord.o: polarCoord.cpp polarCoord.hpp
+-include depend
+

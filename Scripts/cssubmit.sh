@@ -5,11 +5,10 @@ if [ -d submit_dir ]; then
 fi
 mkdir submit_dir
 
+echo "converting any tabs to spaces..."
 shopt -s nullglob
 for f in *.cpp
 do
-	echo $f
-	echo "basename: $(basename $f)"
 	expand -t 4 $f > submit_dir/$(basename $f)
 done
 for f in *.h
@@ -20,11 +19,9 @@ for f in *.hpp
 do
 	expand -t 4 $f > "submit_dir/$(basename $f)"
 done
-for f in *.tpp;
-do
-	expand -t 4 $f > "submit_dir/$(basename $f)"
-done
-expand -t 4 Makefile > submit_dir/Makefile
+
+cp Makefile submit_dir/Makefile
+
 cd submit_dir
 ssh mst "mkdir -p ~/cs328/hw$assignment"
 scp -r * mst:~/cs328/hw$assignment
