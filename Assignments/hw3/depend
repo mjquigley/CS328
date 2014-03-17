@@ -1,2 +1,0 @@
-driver.o: driver.cpp array.h array.hpp newtonDividedDifference.h \
-  newtonDividedDifference.hpp

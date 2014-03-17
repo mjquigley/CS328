@@ -18,7 +18,7 @@
 ###############################################################################
 
 CXX = g++
-FLAGS = -W -Wall -pedantic-errors
+FLAGS = -W -Wall -pedantic-errors -g
 
 SOURCES = $(wildcard *.cpp)
 HEADERS = $(wildcard *.h)

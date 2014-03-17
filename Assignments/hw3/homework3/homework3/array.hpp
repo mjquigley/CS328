@@ -1,10 +1,12 @@
+///////////////////////////////////////////////////////////////////
+/// @file array.hpp
+/// @author Matthew Quigley CS328 Section A
+/// @brief implimentation of an Array class and its Iterator
+///////////////////////////////////////////////////////////////////
+
 template <class T>
 Array<T>::Array(const Array<T>& other){
-	size = other.size;
-	ptr_to_data = new T[size];
-	for (int i = 0; i < size; i++){
-		ptr_to_data[i] = other.ptr_to_data[i];
-	}
+	copyArray(other);
 }
 
 template <class T>
@@ -13,12 +15,18 @@ Array<T>::~Array(){
 }
 
 template <class T>
-T& Array<T>::operator[](int index){
+T& Array<T>::operator[](const int index){
+	if (index >= size || index < 0){
+		throw IndexOutOfRangeException();
+	}
 	return ptr_to_data[index];
 }
 
 template <class T>
-const T& Array<T>::operator[](int index) const{
+const T& Array<T>::operator[](const int index) const{
+	if (index >= size || index < 0){
+		throw IndexOutOfRangeException();
+	}
 	return ptr_to_data[index];
 }
 
@@ -29,11 +37,7 @@ int Array<T>::numElements() const{
 
 template <class T>
 Array<T>& Array<T>::operator=(const Array<T>& rhs){
-	delete[] ptr_to_data;
-	ptr_to_data = new T[size];
-	for (int i = 0; i < size; i++){
-		ptr_to_data[i] = rhs.ptr_to_data[i];
-	}
+	copyArray(rhs);
 	return *this;
 }
 
@@ -45,6 +49,15 @@ Array<T>& Array<T>::operator=(const T& rhs){
 }
 
 template <class T>
+void Array<T>::setSize(int newSize){
+	if (newSize < 0){
+		throw InvalidSizeException();
+	}
+	size = newSize;
+	ptr_to_data = new T[size];
+}
+
+template <class T>
 Iterator<T> Array<T>::begin(){
 	return Iterator<T>(*this);
 }
@@ -52,6 +65,15 @@ Iterator<T> Array<T>::begin(){
 template <class T>
 Iterator<T> Array<T>::end(){
 	return Iterator<T>(*this, true);
+}
+
+template <class T>
+void Array<T>::copyArray(const Array<T> &other){
+	size = other.size;
+	ptr_to_data = new T[size];
+	for (int i = 0; i < size; i++){
+		ptr_to_data[i] = T(other.ptr_to_data[i]);
+	}
 }
 
 
