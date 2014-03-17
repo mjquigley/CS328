@@ -10,7 +10,7 @@
 ///////////////////////////////////////////////////////////////////
 
 ///////////////////////////////////////////////////////////////////
-/// @fn double operator()(int n)
+/// @fn const Array<double> operator()(int n)
 /// @brief calculates the coefficients of a chebyshev polynomial
 /// @pre n >= 0
 /// @post returns an Array of coefficients of length n+1

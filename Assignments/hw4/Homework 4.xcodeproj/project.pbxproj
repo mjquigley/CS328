@@ -37,6 +37,7 @@
 		344D792D18CE9078009E2902 /* polynomial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = polynomial.h; sourceTree = "<group>"; };
 		3481ABB918D67C4B0051594F /* compareResults.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = compareResults.h; sourceTree = "<group>"; };
 		3481ABBA18D68AC40051594F /* compareResults.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = compareResults.hpp; sourceTree = "<group>"; };
+		3481ABBB18D68C0F0051594F /* polynomial.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = polynomial.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				344D792D18CE9078009E2902 /* polynomial.h */,
+				3481ABBB18D68C0F0051594F /* polynomial.hpp */,
 				344D792C18CE8D43009E2902 /* chebyshev.h */,
 				344D792A18CE8982009E2902 /* function.h */,
 				344D792818CE87D6009E2902 /* input_file */,

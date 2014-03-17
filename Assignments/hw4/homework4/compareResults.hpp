@@ -3,9 +3,10 @@
 /// @author Matthew Quigley CS328 Section A
 /// @brief implimentation of the result comparison class
 ///////////////////////////////////////////////////////////////////
+
 template <class T>
-void CompareResults<T>::operator()(Array<T> newEstimates, Array<T> oldEstimates,
-				Array<T> actualValues)
+void CompareResults<T>::operator()(const Array<T>& newEstimates, const Array<T>& oldEstimates,
+								   const Array<T>& actualValues)
 {
 	Array<double> absoluteError(newEstimates.numElements());
 	Array<double> absoluteError2(oldEstimates.numElements());
