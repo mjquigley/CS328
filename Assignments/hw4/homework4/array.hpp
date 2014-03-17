@@ -84,26 +84,6 @@ void Array<T>::copyArray(const Array<T> &other){
 	}
 }
 
-template <class T>
-std::ostream& operator<<(std::ostream& out, const Array<T>& array){
-	out << "[ ";
-	for (Iterator<T> iter = array.begin(); iter != array.end(); ++iter){
-		out << *iter;
-		if (iter+1 != array.end){
-			out << ", ";
-		}
-	}
-	out << " ]";
-}
-
-template <class T>
-std::istream& operator>>(std::istream& in, Array<T>& array){
-	for (int i = 0; i < array.numElements; ++i){
-		in > array[i];
-	}
-}
-
-
 
 template <class T>
 Iterator<T>::Iterator(Array<T>& array, bool isEnd){

@@ -13,6 +13,7 @@
 #include <fstream>
 #include <utility>
 #include <cmath>
+#include <stdlib.h>
 int main(int argc, const char * argv[])
 {
 	if (argc == 3){

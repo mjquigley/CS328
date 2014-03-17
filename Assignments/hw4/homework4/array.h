@@ -142,8 +142,24 @@ public:
 	Iterator<T> begin();
 	Iterator<T> end();
 	
-	friend std::ostream& operator<<(std::ostream& out, const Array<T>& array);
-	friend std::istream& operator>>(std::istream& in, Array<T>& array);
+	friend std::ostream& operator<<(std::ostream& out, const Array<T>& array){
+		out << "[ ";
+		for (Iterator<T> iter = array.begin(); iter != array.end(); ++iter){
+			out << *iter;
+			if (iter+1 != array.end){
+				out << ", ";
+			}
+		}
+		out << " ]";
+		return out;
+	}
+	
+	friend std::istream& operator>>(std::istream& in, Array<T>& array){
+		for (int i = 0; i < array.numElements; ++i){
+			in > array[i];
+		}
+		return in;
+	}
 private:
 	int size;
 	T* ptr_to_data;
