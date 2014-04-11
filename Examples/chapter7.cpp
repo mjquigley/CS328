@@ -46,3 +46,18 @@ int main(){
 	cout << "--- end main ---" << endl;
 	return 0;
 }
+
+class good{
+public:
+	good(){p = new int(0);}
+	~good(delete p);
+	int* p;
+	good(const good& x):p(new int(*x.p)){}
+	good& operator=(const good& rhs){
+		if (rhs.p != p){
+			delete p;
+			p = new int(*rhs.p);
+		}
+		return *this; 
+	}
+};
