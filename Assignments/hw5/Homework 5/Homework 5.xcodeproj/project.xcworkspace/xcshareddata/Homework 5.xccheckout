@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FEC7D2C2-C504-413D-943C-8CF3E1C01FFB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Homework 5</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>E3B94A49-F4BF-4454-B1CE-52BFFF0F733A</key>
+		<string>ssh://github.com/X3nopro/CS328.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Assignments/hw5/Homework 5/Homework 5.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>E3B94A49-F4BF-4454-B1CE-52BFFF0F733A</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/X3nopro/CS328.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>E3B94A49-F4BF-4454-B1CE-52BFFF0F733A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>E3B94A49-F4BF-4454-B1CE-52BFFF0F733A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>CS328</string>
+		</dict>
+	</array>
+</dict>
+</plist>
